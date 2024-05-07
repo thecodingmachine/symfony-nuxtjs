@@ -45,7 +45,7 @@ sudo docker run hello-world
 sudo apt  install docker-compose
 sudo apt install make
 cp .env.dist .env
-cp docker-compose.override.yml.template  docker-compose.override.yml
+cp compose.override.yaml.template  compose.override.yaml
 
 sudo groupadd docker 
 sudo usermod -aG docker $USER
