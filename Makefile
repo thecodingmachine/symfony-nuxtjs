@@ -57,7 +57,7 @@ flogs: sync-env ## Display logs of front
 ## We add `; \` to ignore error. `cp -n .env.dist .env;` could not work if .env exist already, it wont be replaced
 init-dev: sync-env ## Init dev env
 	cp -n .env.dist .env; \
-	cp -n docker-compose.override.yml.template docker-compose.override.yml; \
+	cp -n compose.override.yaml.template compose.override.yaml; \
 	if uname | grep -iq "linux\|darwin"; then \
 		echo "Add $(BASE_DOMAIN) and $(API_DOMAIN)  mail.${BASE_DOMAIN} and samltest.$(BASE_DOMAIN) to your /etc/hosts"; \
 		if  grep -q $(BASE_DOMAIN) /etc/hosts ; then echo "not adding to /etc/hosts" ; else printf "\n127.0.0.1 $(BASE_DOMAIN) $(API_DOMAIN) samltest.$(BASE_DOMAIN) mail.${BASE_DOMAIN}\n" | sudo tee -a /etc/hosts ; fi \

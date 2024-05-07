@@ -29,7 +29,7 @@ services:
   initback:
     extends:
       service: back
-      file: docker-compose.yml
+      file: compose.yaml
     restart: "no"
     volumes:
       - ./apps/back:/var/www/html/:delegated
@@ -60,7 +60,7 @@ services:
   mysql_tests:
     extends:
       service: mysql
-      file: docker-compose.yml
+      file: compose.yaml
     tmpfs:
       - /var/lib/mysql
 

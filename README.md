@@ -68,7 +68,7 @@ When cloning your project, you need to
 
 - Copy a .env.dist as a .env
 - Create expected values into your "/etc/hosts"
-- Copy docker-compose.override.yml.template into docker-compose.override.yml
+- Copy compose.override.yaml.template into compose.override.yaml
 
 A specific makefile task has been created:
 

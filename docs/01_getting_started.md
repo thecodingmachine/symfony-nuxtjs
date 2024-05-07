@@ -1,6 +1,6 @@
 // prepare dev env
 ```
-cp docker-compose.override.yml.template docker-compose.override.yml
+cp compose.override.yaml.template compose.override.yaml
 cp .env.dist .env
 ```
 
